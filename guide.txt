@@ -1,0 +1,27 @@
+cert: .csr
+
+
+Dockerfile of mysql:
+
+Create docker bridge network:
+	docker network create --driver bridge --subnet 172.0.0.1/19 my-nw
+auth:
+	docker build .
+	docker tag 2f quannguyen793/auth
+	docker run -p 5000:5000 --link db:db --network my-nw --name auth --ip 172.0.0.3 quannguyen793/auth
+gateway:
+	docker build .
+	docker tag 59 quannguyen793/gateway
+	docker run -p 8000:8000 --network my-nw --link db:db --name gateway --ip 172.0.0.4 quannguyen793/gateway
+svc:
+	docker build .
+	docker tag 86 quannguyen793/svc
+	docker run -p 6000:6000 --network my-nw --name svc --link db:db --ip 172.0.0.5 quannguyen793/svc
+db:
+	docker build .
+	docker tag 45 quannguyen793/db
+	docker run -p 3306:3306 --name db --network my-nw --ip 172.0.0.6 quannguyen793/db
+Truy cập  db:
+	docker exec -u -it <db-container-ID> /bin/bash
+Tạo tài khoản: 
+	curl -X POST -u quannguyen2:quan123 http://127.0.0.1:5000/register
