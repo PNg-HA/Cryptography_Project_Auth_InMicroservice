@@ -1,21 +1,21 @@
-curl -X POST -u quannguyen:quan123 http://127.0.0.1:8000/register
+curl -X POST -u quannguyen:quan123 https://mmhmicro.online/register
 
 
 
-curl -X POST -u quannguyen:quan123 http://127.0.0.1:8000/login
+curl -X POST -u quannguyen:quan123 https://mmhmicro.online/login
 
 
 
-curl -X POST -H "Content-Type: application/json" -H "Authorization: <opaque>" -d "{\"title\": \"Buy groceries\", \"description\": \"Milk, eggs, bread\", \"due_date\": \"2023-06-30\"}" http://127.0.0.1:8000/create
+curl -X POST -H "Content-Type: application/json" -H "Authorization: <opaque>" -d "{\"title\": \"Buy groceries\", \"description\": \"Milk, eggs, bread\", \"due_date\": \"2023-06-30\"}" https://mmhmicro.online/create
 
 
 
-curl -X GET -H "Content-Type: application/json" -H "Authorization: <opaque>" http://127.0.0.1:8000/retrival
-
-ex: curl -X DELETE -H "Content-Type: application/json" -H "Authorization: 575fc2aebde84186582e7da107447747520fba15f554c621e6f27ab93df9646e" http://127.0.0.1:8000/remove/1
-
-curl -X DELETE -H "Content-Type: application/json" -H "Authorization: <opaque>" http://127.0.0.1:8000/remove/<id>
+curl -X GET -H "Content-Type: application/json" -H "Authorization: <opaque>" https://mmhmicro.online/retrival
 
 
 
-curl -X GET -H "Content-Type: application/json" -H "Authorization: <opaque>" http://127.0.0.1:8000/logout
+curl -X DELETE -H "Content-Type: application/json" -H "Authorization: <opaque>" https://mmhmicro.online/remove/<id>
+
+
+
+curl -X GET -H "Content-Type: application/json" -H "Authorization: <opaque>" https://mmhmicro.online/logout
