@@ -3,7 +3,7 @@
 Thành viên nhóm:
 - Nguyễn Nhật Quân: phụ trách mảng Dev (code các service).
 - Phạm Nguyễn Hải Anh: phụ trách mảng Ops (triển khai docker, triển khai web có tên miền, cân bằng tải với AWS ALB)
-
+Bản báo cáo chi tiết: [Nhom1_21520586-21522497.docx](Nhom1_21520586-21522497.docx)
 ## Kiến trúc
 ![image](https://github.com/PNg-HA/NT219_Crypto_Project_AuthForUserInMcrservice/assets/93396414/2f98b8e6-dd5f-4ae8-9a1b-da2a8e5a387e)
 
